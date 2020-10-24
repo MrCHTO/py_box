@@ -1,4 +1,25 @@
-*.log
-*.tmp
+####  忽略  所有  ####
+/*
+
+###### 重  要 ######
+!.gitignore
+!/Test
+!README.md
+
+#### 不忽略以下 ####
+!/Data_Structure
+!/HDU_OJ
+!/Linux
+!/Sort
+
+####  忽略  以下  ####
+# 忽略Virtual配置文件
 .vs
 .vscode
+# 忽略日志文件
+*.log
+# 忽略临时文件
+*.tmp
+# 忽略Windows可执行文件
+*.exe
+
