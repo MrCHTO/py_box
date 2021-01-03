@@ -1,7 +1,3 @@
-import os
-# import Xmind_T
-
-
 def Basis():
     inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
     outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
@@ -48,38 +44,4 @@ def Basis():
         s = inf.readline()
     inf.close
     outf.close
-
-
-def Picture():
-    inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
-    outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
-    s = inf.readline()
-    while s:
-        length = len(s)
-        a = 0
-        for i in range(length):
-            if s[i:i+1] == '!':
-                if s[i+1:i+2] == '[':
-                    a = 1
-                    break
-
-        if a == 1:
-            outf.write(s[0:27])
-            outf.write(s[97:length])
-            s = inf.readline()
-            continue
-        else:
-            outf.write(s)
-        s = inf.readline()
-    inf.close
-    outf.close
-
-
-def main():
-    # Xmind_T.Basis()
-    Basis()
-    # Picture()
-
-
-if __name__ == '__main__':
-    main()
+    return
