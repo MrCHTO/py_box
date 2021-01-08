@@ -1,11 +1,11 @@
-#import os
-# import Xmind_T
+from tkinter import *
 
 
 def Basis():
     inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
     #outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
-    outf = open("C:\\Users\Mr_CH\OneDrive\桌面\output.txt", 'w', encoding='UTF-8')
+    outf = open("C:\\Users\Mr_CH\OneDrive\桌面\output.txt",
+                'w', encoding='UTF-8')
     s = inf.readline()
     while s:
         length = len(s)
@@ -51,34 +51,17 @@ def Basis():
     outf.close
 
 
-def Picture():
-    inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
-    outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
-    s = inf.readline()
-    while s:
-        length = len(s)
-        a = 0
-        for i in range(length):
-            if s[i:i+1] == '!':
-                if s[i+1:i+2] == '[':
-                    a = 1
-                    break
+top = Tk()  # 创建窗口
+top.title('Markdown格式转化')  # 设置窗口名称
+top.geometry('700x450')  # 设置窗口大小
 
-        if a == 1:
-            outf.write(s[0:27])
-            outf.write(s[97:length])
-            s = inf.readline()
-            continue
-        else:
-            outf.write(s)
-        s = inf.readline()
-    inf.close
-    outf.close
+l = Label(top, text='XMind导出', width=20)  # 创建标签
+l.grid(row=1, column=1)  # 网格式放置组件
+# l.pack()
 
+b = Button(top, text='转换', width=20, height=1,
+           relief=GROOVE, command=Basis)  # 创建按钮
+b.grid(row=1, column=2)  # 网格式放置组件
+# b.pack()  # 填充式放置组件
 
-def main():
-    Basis()
-
-
-if __name__ == '__main__':
-    main()
+top.mainloop()
