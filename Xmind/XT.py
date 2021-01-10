@@ -228,7 +228,7 @@ def Bmd():
 
 top = Tk()  # 创建顶层容器
 top.title('转化')  # 设置容器名称
-top.geometry('223x229')  # 设置容器大小
+top.geometry('217x179')  # 设置容器大小
 top.resizable(False, False)  # 防止用户调整大小
 font1 = Font(family='Courier', size=14, weight=BOLD)
 font2 = Font(family='Courier', size=14)
@@ -239,13 +239,14 @@ label2 = Label(top, font=font1, text='修改', width=3)
 label3 = Label(top, font=font1, text='项', width=2)
 label4 = Label(top, font=font1, text='耗时', width=3)
 label5 = Label(top, font=font1, text='MS', width=2)
+label6 = Label(top, font=font1, text='.MD', width=3)
 
 button0 = Button(top, font=font2, text='导出TXT', width=9,
                  relief=GROOVE, command=Btxt)
 button1 = Button(top, font=font2, text='导出MD', width=9,
                  relief=GROOVE, command=Bmd)
 
-entry0 = Entry(top, font=font2, width=20)
+entry0 = Entry(top, font=font2, width=15)
 entry1 = Entry(top, font=font2, width=8)
 entry2 = Entry(top, font=font2, width=8)
 
@@ -254,7 +255,8 @@ entry2.insert(0, '0')
 
 
 label0.grid(row=0, columnspan=6)
-entry0.grid(row=1, columnspan=6)
+entry0.grid(row=1, column=0, columnspan=5)
+label6.grid(row=1, column=5)
 button0.grid(row=3, column=0, columnspan=3)
 button1.grid(row=3, column=3, columnspan=3)
 label1.grid(row=4, columnspan=6)
