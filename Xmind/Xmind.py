@@ -7,7 +7,7 @@ def Basis():
     s = inf.readline()
     while s:
         length = len(s)
-        a, b, c, d, e, f, g, h = 0, 0, 0, 0, 0, 0, 0, 0
+        a, b, c, d, e, f, g, h, x = 0, 0, 0, 0, 0, 0, 0, 0, 0
         for i in range(length):
 
             if s[i:i+1] == '#':
@@ -23,7 +23,11 @@ def Basis():
                 c = 1
                 break
 
-            elif s[i:i+1] == "\t" and s[i+1:i+2] == "\t":
+            elif s[i:i+1] == "\t" and s[i+1:i+2] == "\t" and s[i+2:i+3] == " ":
+                x = 1
+                break
+
+            elif s[i:i+1] == "\t" and s[i+1:i+2] == "\t" and s[i+2:i+3] != " ":
                 d = 1
                 break
 
@@ -56,31 +60,40 @@ def Basis():
             s = inf.readline()
             continue
 
-        if c == 1 or d == 1:
+        if c == 1:
+            outf.write('\n####')
+            outf.write(s[2:length])
+            s = inf.readline()
+            continue
+
+        if d == 1:
             if c == 1:
                 outf.write('\n')
-            outf.write(s[1:length])
+            outf.write(s[2:length])
             s = inf.readline()
             continue
 
         if e == 1:
             outf.write('>')
             outf.write(s[2:length])
-            outf.write('\n')
             s = inf.readline()
             continue
 
         if f == 1:
             outf.write('>')
             outf.write(s[3:length])
-            outf.write('\n')
             s = inf.readline()
             continue
 
         if g == 1:
             outf.write('>')
             outf.write(s[0:length])
-            outf.write('\n')
+            s = inf.readline()
+            continue
+
+        if x == 1:
+            outf.write('\t>')
+            outf.write(s[4:length])
             s = inf.readline()
             continue
 
