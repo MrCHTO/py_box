@@ -120,7 +120,7 @@ def train_net(args, model, epoch_size, data_path, repeat_size, ckpoint_cb, sink_
     ds_train = create_dataset(os.path.join(
         data_path, "train"), 32, repeat_size)
     model.train(epoch_size, ds_train, callbacks=[
-                ckpoint_cb, LossMonitor(125)], dataset_sink_mode=sink_mode)
+                ckpoint_cb, LossMonitor(75)], dataset_sink_mode=sink_mode)
 
 
 def test_net(network, model, data_path):
