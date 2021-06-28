@@ -16,3 +16,10 @@ input_x = mindspore.Tensor(np.array([1.0, 2.0, 4.0]), mindspore.float32)
 input_y = 3.0
 print(input_x**input_y)
 print(input_x + input_y)
+
+
+import numpy as np
+import mindspore
+from mindspore import Tensor
+import mindspore.ops as ops
+
