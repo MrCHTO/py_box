@@ -2,6 +2,8 @@
 
 # import mindspore.ops.operations as P
 # pow = P.Pow()
+
 # 上下等价
+
 # import mindspore.ops as ops
 # pow = ops.Pow()
