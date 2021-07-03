@@ -8,5 +8,7 @@
 *.tmp
 # 忽略Windows可执行文件
 *.exe
+#数据集
+datasets
 dataset
 
