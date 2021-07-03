@@ -1,0 +1,18 @@
+
+
+All Tensors:
+
+index:	size:	real_size:	offset:	addr:	type:	lifelong:	life_start:	life_end:	source node name:
+%0T	#512S	#8S	&0	&0	Common	0	0	1	MatMul-op1968
+%1T	#512S	#8S	&0	&0	OutputOnly	0	1	1	BiasAdd-op1969
+
+
+All Nodes:
+
+$0	MatMul-op1968	0	inputs[%0P, %1P, ]	outputs[%0T, ]	workspace[]	streamID[@4294967295]
+$1	BiasAdd-op1969	0	inputs[%0T, %2P, ]	outputs[%1T, ]	workspace[]	streamID[@4294967295]
+
+
+All Stream Groups:
+
+

@@ -1,0 +1,48 @@
+
+
+All Tensors:
+
+index:	size:	real_size:	offset:	addr:	type:	lifelong:	life_start:	life_end:	source node name:
+%0T	#512S	#4S	&0	&0	Common	0	0	15	Gather-op1934
+%1T	#512S	#8S	&0	&0	Common	0	1	12	Mul-op1935
+%2T	#512S	#4S	&0	&0	OutputOnly	0	2	2	AssignAdd-op1936
+%3T	#10752S	#10240S	&0	&0	Common	0	3	13	Mul-op1937
+%4T	#512S	#256S	&0	&0	Common	0	4	7	OneHot-op1938
+%5T	#512S	#256S	&0	&0	Common	0	5	6	MatMul-op1939
+%6T	#512S	#256S	&0	&0	Common	0	6	7	BiasAdd-op1940
+%7T	#512S	#128S	&0	&0	Common	0	7	8	SoftmaxCrossEntropyWithLogits-op1941
+%8T	#512S	#256S	&0	&0	Common	0	7	9	SoftmaxCrossEntropyWithLogits-op1941
+%9T	#512S	#256S	&0	&0	Workspace	0	7	7	SoftmaxCrossEntropyWithLogits-op1941
+%10T	#512S	#4S	&0	&0	OutputOnly	0	8	8	ReduceMean-op1942
+%11T	#512S	#256S	&0	&0	Common	0	9	11	Mul-op1943
+%12T	#512S	#8S	&0	&0	Common	0	10	12	BiasAddGrad-op1944
+%13T	#10752S	#10240S	&0	&0	Common	0	11	13	MatMul-op1945
+%14T	#512S	#8S	&0	&0	Common	0	12	15	AddN-op1946
+%15T	#10752S	#10240S	&0	&0	Common	0	13	14	AddN-op1947
+%16T	#10752S	#10240S	&0	&0	OutputOnly	0	14	14	ApplyMomentum-op1948
+%17T	#512S	#8S	&0	&0	OutputOnly	0	15	15	ApplyMomentum-op1949
+
+
+All Nodes:
+
+$0	Gather-op1934	0	inputs[%0P, %1P, ]	outputs[%0T, ]	workspace[]	streamID[@4294967295]
+$1	Mul-op1935	0	inputs[%2P, %3P, ]	outputs[%1T, ]	workspace[]	streamID[@4294967295]
+$2	AssignAdd-op1936	0	inputs[%1P, %4P, ]	outputs[%2T, ]	workspace[]	streamID[@4294967295]
+$3	Mul-op1937	0	inputs[%5P, %3P, ]	outputs[%3T, ]	workspace[]	streamID[@4294967295]
+$4	OneHot-op1938	0	inputs[%6P, %7P, %8P, ]	outputs[%4T, ]	workspace[]	streamID[@4294967295]
+$5	MatMul-op1939	0	inputs[%9P, %5P, ]	outputs[%5T, ]	workspace[]	streamID[@4294967295]
+$6	BiasAdd-op1940	0	inputs[%5T, %2P, ]	outputs[%6T, ]	workspace[]	streamID[@4294967295]
+$7	SoftmaxCrossEntropyWithLogits-op1941	0	inputs[%6T, %4T, ]	outputs[%7T, %8T, ]	workspace[%9T, ]	streamID[@4294967295]
+$8	ReduceMean-op1942	0	inputs[%7T, ]	outputs[%10T, ]	workspace[]	streamID[@4294967295]
+$9	Mul-op1943	0	inputs[%8T, %10P, ]	outputs[%11T, ]	workspace[]	streamID[@4294967295]
+$10	BiasAddGrad-op1944	0	inputs[%11T, ]	outputs[%12T, ]	workspace[]	streamID[@4294967295]
+$11	MatMul-op1945	0	inputs[%11T, %9P, ]	outputs[%13T, ]	workspace[]	streamID[@4294967295]
+$12	AddN-op1946	0	inputs[%1T, %12T, ]	outputs[%14T, ]	workspace[]	streamID[@4294967295]
+$13	AddN-op1947	0	inputs[%3T, %13T, ]	outputs[%15T, ]	workspace[]	streamID[@4294967295]
+$14	ApplyMomentum-op1948	0	inputs[%5P, %11P, %0T, %15T, %12P, ]	outputs[%16T, ]	workspace[]	streamID[@4294967295]
+$15	ApplyMomentum-op1949	0	inputs[%2P, %13P, %0T, %14T, %12P, ]	outputs[%17T, ]	workspace[]	streamID[@4294967295]
+
+
+All Stream Groups:
+
+
