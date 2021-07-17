@@ -6,6 +6,7 @@
 *.log
 # 忽略临时文件
 *.tmp
+.history
 # 忽略Windows可执行文件
 *.exe
 #数据集
