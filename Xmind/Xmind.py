@@ -2,8 +2,8 @@ from os import write
 
 
 def Basis():
-    inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
-    outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
+    inf = open("./input.txt", encoding='UTF-8')
+    outf = open("./output.txt", 'w', encoding='UTF-8')
     s = inf.readline()
     while s:
         length = len(s)
@@ -103,8 +103,9 @@ def Basis():
 
 
 def Picture():
-    inf = open("C:\\GitBox\\py_box\\Xmind\\input.txt", encoding='UTF-8')
-    outf = open("C:\\GitBox\\py_box\\Xmind\\output.txt", 'w', encoding='UTF-8')
+    inf = open("/usr/local/GitBox/py_box/Xmind/input.txt", encoding='UTF-8')
+    outf = open("/usr/local/GitBox/py_box/Xmind/output.txt",
+                'w', encoding='UTF-8')
     s = inf.readline()
     while s:
         length = len(s)
@@ -117,7 +118,8 @@ def Picture():
 
         if a == 1:
             outf.write(s[0:27])
-            outf.write(s[97:length])
+            outf.write("../图像/汇编原理/")
+            outf.write(s[143:length])
             s = inf.readline()
             continue
         else:
@@ -128,8 +130,9 @@ def Picture():
 
 
 def main():
-    Basis()
+    # Basis()
+    Picture()
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+main()
