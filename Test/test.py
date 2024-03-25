@@ -1,3 +1,4 @@
+print("hhhhh")
 name = 999  # 标签变量名，可为任何类型
 print(str(name)+"AAAA")
 name = "ABC"  # '以及" 只能一行打印 ''' 可以多行打印
